@@ -35,7 +35,10 @@ namespace LeagueRestClient
         SILVER,
         GOLD,
         PLATINUM,
-        DIAMOND
+        DIAMOND,
+        MASTER,
+        GRANDMASTER,
+        CHALLENGER
     }
 
     public enum Division
