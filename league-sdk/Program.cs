@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using League;
+using LeagueRestClient;
 
 namespace league_sdk
 {
@@ -8,8 +9,8 @@ namespace league_sdk
     {
         static void Main(string[] args)
         {
-            var sdk = new LeagueRestSdk("RGAPI-2b6cd424-8b9c-4360-b662-d67f0570258d");
-            Task<string> response = sdk.LeaugeV4(Region.NA1, Queue.RANKED_SOLO_5x5, Tier.SILVER, Division.II, 1);
+            var leagueClient = new LeagueRestClient.RestClient("RGAPI-42075eb2-3d66-4be6-9097-f0a8b4447e06");
+            Task<List<LeagueEntryDTO>> response = leagueClient.GetLeagueEntries(Region.NA1, Queue.RANKED_SOLO_5x5, Tier.SILVER, Division.II, 1);
 
             response.Wait();
 

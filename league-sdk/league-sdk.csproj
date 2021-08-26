@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LeagueRestSdk\LeagueRestSdk.csproj" />
+    <ProjectReference Include="..\LeagueRestSdk\LeagueRestClient.csproj" />
   </ItemGroup>
 
 </Project>
